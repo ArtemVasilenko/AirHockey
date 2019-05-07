@@ -19,17 +19,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f9C-tP-wuZ" userLabel="TopHalf">
-                                <rect key="frame" x="0.0" y="20" width="375" height="315"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="335"/>
+                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="f9C-tP-wuZ" secondAttribute="height" multiplier="75:67" id="6EN-Ma-i69"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="7dx-My-Sd9" appends="YES" id="tgO-02-Bgo"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ipD-PK-EN0" userLabel="BottomHalf">
-                                <rect key="frame" x="0.0" y="332" width="375" height="315"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="332" width="375" height="335"/>
+                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ipD-PK-EN0" secondAttribute="height" multiplier="75:67" id="zA3-sl-xv5"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="ls0-ww-J4n" appends="YES" id="cHO-0O-8Nx"/>
                                 </connections>
@@ -38,28 +44,32 @@
                                 <rect key="frame" x="0.0" y="332" width="375" height="3"/>
                                 <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="3" id="8RY-bd-qDR"/>
+                                    <constraint firstAttribute="height" constant="3" id="2mx-1J-Voo"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iZO-b2-qRG" userLabel="TopGoal">
                                 <rect key="frame" x="87.5" y="20" width="200" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="8Wx-yK-xiJ"/>
-                                    <constraint firstAttribute="height" constant="40" id="uv3-XY-GMK"/>
+                                    <constraint firstAttribute="height" constant="40" id="5px-EX-70Y"/>
+                                    <constraint firstAttribute="width" constant="200" id="xRy-Na-SwA"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="23I-de-vTr" userLabel="BottomGoal">
-                                <rect key="frame" x="87" y="607" width="201" height="40"/>
+                                <rect key="frame" x="87.5" y="627" width="200" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="V5M-eP-nxu"/>
+                                    <constraint firstAttribute="width" constant="200" id="V8e-ss-3zy"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZuQ-hJ-CWV" userLabel="TopPaddle">
                                 <rect key="frame" x="137.5" y="142" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="lxF-Mj-8D6"/>
-                                    <constraint firstAttribute="height" constant="100" id="mZg-Er-JAF"/>
+                                    <constraint firstAttribute="width" constant="100" id="4TW-S0-yVp"/>
+                                    <constraint firstAttribute="height" constant="100" id="Vgl-Gi-bat"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="D3d-hR-ody" appends="YES" id="lRp-zm-phs"/>
@@ -69,17 +79,17 @@
                                 <rect key="frame" x="162.5" y="308.5" width="50" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="Gyx-EI-uTK"/>
-                                    <constraint firstAttribute="height" constant="50" id="aDD-BX-uRB"/>
+                                    <constraint firstAttribute="height" constant="50" id="T6d-sS-hGo"/>
+                                    <constraint firstAttribute="width" constant="50" id="rXS-6o-gZ1"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ec7-r7-RnU" userLabel="BottomPaddle">
-                                <rect key="frame" x="137" y="427" width="100" height="100"/>
+                                <rect key="frame" x="137.5" y="427" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="H4u-Kj-2CY"/>
-                                    <constraint firstAttribute="height" constant="100" id="SRv-VM-mhb"/>
+                                    <constraint firstAttribute="width" constant="100" id="7z2-iY-rGn"/>
+                                    <constraint firstAttribute="height" constant="100" id="PTu-yB-wQ6"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="WoV-ch-Ots" appends="YES" id="ZbM-A0-vGE"/>
@@ -88,32 +98,26 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="iZO-b2-qRG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="80X-qg-mNB"/>
-                            <constraint firstItem="23I-de-vTr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="9x7-C4-Cbj"/>
-                            <constraint firstItem="23I-de-vTr" firstAttribute="top" secondItem="ec7-r7-RnU" secondAttribute="bottom" constant="80" id="AXP-K8-Rb3"/>
-                            <constraint firstItem="iZO-b2-qRG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Aha-5o-bE5"/>
-                            <constraint firstItem="YEd-fP-21X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ikm-us-taS"/>
-                            <constraint firstItem="ec7-r7-RnU" firstAttribute="top" secondItem="ALt-qH-brV" secondAttribute="bottom" constant="68.5" id="L0A-np-PER"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ec7-r7-RnU" secondAttribute="trailing" constant="138" id="Nmk-Mo-U3V"/>
-                            <constraint firstItem="23I-de-vTr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OAS-Qf-ylM"/>
-                            <constraint firstItem="ipD-PK-EN0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Oy9-EJ-pNf"/>
-                            <constraint firstItem="ec7-r7-RnU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="137" id="P0Q-VR-tmS"/>
-                            <constraint firstItem="YEd-fP-21X" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Psm-CK-Soa"/>
-                            <constraint firstItem="ALt-qH-brV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R5P-6v-fka"/>
-                            <constraint firstItem="ALt-qH-brV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Sla-I7-NAC"/>
-                            <constraint firstItem="f9C-tP-wuZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="USa-Em-G4i"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ipD-PK-EN0" secondAttribute="bottom" constant="20" id="Vgo-Sy-yBt"/>
-                            <constraint firstItem="YEd-fP-21X" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WNz-ot-zgI"/>
-                            <constraint firstAttribute="bottom" secondItem="23I-de-vTr" secondAttribute="bottom" constant="20" symbolic="YES" id="ZLm-vg-Sho"/>
-                            <constraint firstItem="ZuQ-hJ-CWV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zac-X9-Fmy"/>
-                            <constraint firstItem="ZuQ-hJ-CWV" firstAttribute="top" secondItem="iZO-b2-qRG" secondAttribute="bottom" constant="82" id="d5s-p6-9et"/>
-                            <constraint firstItem="f9C-tP-wuZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="d6d-iJ-pbx"/>
-                            <constraint firstItem="ipD-PK-EN0" firstAttribute="top" secondItem="ZuQ-hJ-CWV" secondAttribute="bottom" constant="90" id="gB6-IB-3D9"/>
-                            <constraint firstItem="ec7-r7-RnU" firstAttribute="top" secondItem="f9C-tP-wuZ" secondAttribute="bottom" constant="92" id="lhz-Xx-Gtu"/>
-                            <constraint firstItem="YEd-fP-21X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mmd-Lm-4H1"/>
-                            <constraint firstItem="23I-de-vTr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="607" id="reC-yE-fKe"/>
-                            <constraint firstItem="f9C-tP-wuZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ywy-wO-fxb"/>
-                            <constraint firstItem="ipD-PK-EN0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zL2-dj-gW6"/>
+                            <constraint firstItem="f9C-tP-wuZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0eJ-0T-0rs"/>
+                            <constraint firstItem="ipD-PK-EN0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0s3-Bs-akV"/>
+                            <constraint firstItem="iZO-b2-qRG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6BJ-Vg-XSW"/>
+                            <constraint firstItem="f9C-tP-wuZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8iX-2u-bRU"/>
+                            <constraint firstItem="YEd-fP-21X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BH2-BA-bSh"/>
+                            <constraint firstItem="ipD-PK-EN0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GfH-iQ-dgJ"/>
+                            <constraint firstItem="YEd-fP-21X" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HGE-D5-Kko"/>
+                            <constraint firstItem="23I-de-vTr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LzS-Bi-y24"/>
+                            <constraint firstItem="23I-de-vTr" firstAttribute="top" secondItem="ec7-r7-RnU" secondAttribute="bottom" constant="100" id="NRy-9t-MDJ"/>
+                            <constraint firstItem="ipD-PK-EN0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Nho-Uv-Pxn"/>
+                            <constraint firstItem="23I-de-vTr" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="UTS-Ie-GsM"/>
+                            <constraint firstItem="ZuQ-hJ-CWV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WaR-Gk-Q1A"/>
+                            <constraint firstItem="ALt-qH-brV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aEC-N2-iRZ"/>
+                            <constraint firstItem="ec7-r7-RnU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e4O-aI-bqw"/>
+                            <constraint firstItem="f9C-tP-wuZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lck-w4-4Xr"/>
+                            <constraint firstItem="YEd-fP-21X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mAv-KL-bv6"/>
+                            <constraint firstItem="iZO-b2-qRG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mUt-xE-oe6"/>
+                            <constraint firstItem="ALt-qH-brV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qnb-sh-Tyj"/>
+                            <constraint firstAttribute="trailing" secondItem="YEd-fP-21X" secondAttribute="trailing" id="uNn-Rt-v12"/>
+                            <constraint firstItem="ZuQ-hJ-CWV" firstAttribute="top" secondItem="iZO-b2-qRG" secondAttribute="bottom" constant="82" id="yCR-s9-Bka"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

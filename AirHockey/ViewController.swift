@@ -24,8 +24,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         animator = UIDynamicAnimator(referenceView: self.view)
-        let gravity = UIGravityBehavior(items: [pack]) //подключение гравитации к шайбе
-        gravity.gravityDirection = CGVector(dx: 0, dy: -1) //направление
         
         let collision = UICollisionBehavior(items: [pack, topPaddle, bottomPaddle])
         collision.translatesReferenceBoundsIntoBoundary = true
