@@ -42,17 +42,19 @@ class ViewController: UIViewController {
         case .began, .changed:
             topSnapBehavior = UISnapBehavior(item: topPaddle, snapTo: sender.location(in: self.view))
             
-            if pack.frame.intersects(bottomGoal.frame) {
+            if pack.frame.intersects(bottomGoal.frame) { //пересечение
                 print("bottom goal")
+                
                 
             } else if pack.frame.intersects(topGoal.frame) {
                 print("top goal")
+                pack.center = self.view.center
+                
             }
             
             animator.addBehavior(topSnapBehavior!)
         default: break
         }
-        
     }
     
     
@@ -69,8 +71,11 @@ class ViewController: UIViewController {
             
             if pack.frame.intersects(bottomGoal.frame) {
                 print("bottom goal")
+                
+                
             } else if pack.frame.intersects(topGoal.frame) {
                 print("top goal")
+                
             }
             
         default: break
