@@ -24,12 +24,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         animator = UIDynamicAnimator(referenceView: self.view)
-        
         let collision = UICollisionBehavior(items: [pack, topPaddle, bottomPaddle])
         collision.translatesReferenceBoundsIntoBoundary = true
-        
         animator.addBehavior(collision)
-        //animator.addBehavior(gravity)
+        
+        self.view.bringSubviewToFront(pack)
     }
     
     
@@ -42,6 +41,14 @@ class ViewController: UIViewController {
         switch sender.state {
         case .began, .changed:
             topSnapBehavior = UISnapBehavior(item: topPaddle, snapTo: sender.location(in: self.view))
+            
+            if pack.frame.intersects(bottomGoal.frame) {
+                print("bottom goal")
+                
+            } else if pack.frame.intersects(topGoal.frame) {
+                print("top goal")
+            }
+            
             animator.addBehavior(topSnapBehavior!)
         default: break
         }
@@ -59,6 +66,13 @@ class ViewController: UIViewController {
         case .began, .changed:
             bottomSnapBehavior = UISnapBehavior(item: bottomPaddle, snapTo: sender.location(in: self.view))
             animator.addBehavior(bottomSnapBehavior!)
+            
+            if pack.frame.intersects(bottomGoal.frame) {
+                print("bottom goal")
+            } else if pack.frame.intersects(topGoal.frame) {
+                print("top goal")
+            }
+            
         default: break
         }
     }

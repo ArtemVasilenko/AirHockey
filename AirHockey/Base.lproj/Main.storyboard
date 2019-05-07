@@ -75,14 +75,6 @@
                                     <outletCollection property="gestureRecognizers" destination="D3d-hR-ody" appends="YES" id="lRp-zm-phs"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ALt-qH-brV" userLabel="Pack">
-                                <rect key="frame" x="162.5" y="308.5" width="50" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="T6d-sS-hGo"/>
-                                    <constraint firstAttribute="width" constant="50" id="rXS-6o-gZ1"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ec7-r7-RnU" userLabel="BottomPaddle">
                                 <rect key="frame" x="137.5" y="427" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -95,6 +87,14 @@
                                     <outletCollection property="gestureRecognizers" destination="WoV-ch-Ots" appends="YES" id="ZbM-A0-vGE"/>
                                 </connections>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ALt-qH-brV" userLabel="Pack">
+                                <rect key="frame" x="172.5" y="318.5" width="30" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0hl-zN-9I7"/>
+                                    <constraint firstAttribute="width" constant="30" id="2j5-Mb-wV1"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -105,17 +105,17 @@
                             <constraint firstItem="YEd-fP-21X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BH2-BA-bSh"/>
                             <constraint firstItem="ipD-PK-EN0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GfH-iQ-dgJ"/>
                             <constraint firstItem="YEd-fP-21X" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HGE-D5-Kko"/>
+                            <constraint firstItem="ALt-qH-brV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KG4-sD-8Jt"/>
                             <constraint firstItem="23I-de-vTr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LzS-Bi-y24"/>
                             <constraint firstItem="23I-de-vTr" firstAttribute="top" secondItem="ec7-r7-RnU" secondAttribute="bottom" constant="100" id="NRy-9t-MDJ"/>
                             <constraint firstItem="ipD-PK-EN0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Nho-Uv-Pxn"/>
                             <constraint firstItem="23I-de-vTr" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="UTS-Ie-GsM"/>
                             <constraint firstItem="ZuQ-hJ-CWV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WaR-Gk-Q1A"/>
-                            <constraint firstItem="ALt-qH-brV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aEC-N2-iRZ"/>
                             <constraint firstItem="ec7-r7-RnU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e4O-aI-bqw"/>
+                            <constraint firstItem="ALt-qH-brV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="i2g-EZ-9q0"/>
                             <constraint firstItem="f9C-tP-wuZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lck-w4-4Xr"/>
                             <constraint firstItem="YEd-fP-21X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mAv-KL-bv6"/>
                             <constraint firstItem="iZO-b2-qRG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mUt-xE-oe6"/>
-                            <constraint firstItem="ALt-qH-brV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qnb-sh-Tyj"/>
                             <constraint firstAttribute="trailing" secondItem="YEd-fP-21X" secondAttribute="trailing" id="uNn-Rt-v12"/>
                             <constraint firstItem="ZuQ-hJ-CWV" firstAttribute="top" secondItem="iZO-b2-qRG" secondAttribute="bottom" constant="82" id="yCR-s9-Bka"/>
                         </constraints>
