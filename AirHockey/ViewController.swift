@@ -24,9 +24,19 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         animator = UIDynamicAnimator(referenceView: self.view)
+        
+        
         let collision = UICollisionBehavior(items: [pack, topPaddle, bottomPaddle])
+        let collisionCenterLine = UICollisionBehavior(items: [topPaddle, bottomPaddle])
+        
+        collisionCenterLine.addBoundary(withIdentifier: "centerLine" as NSCopying, from: CGPoint(x: 0, y: self.view.center.y), to: CGPoint(x: self.view.frame.width, y: self.view.center.y))
+        
         collision.translatesReferenceBoundsIntoBoundary = true
+        collisionCenterLine.translatesReferenceBoundsIntoBoundary = true
+        
+        
         animator.addBehavior(collision)
+        animator.addBehavior(collisionCenterLine)
         
         self.view.bringSubviewToFront(pack)
     }
@@ -48,11 +58,10 @@ class ViewController: UIViewController {
                 
             } else if pack.frame.intersects(topGoal.frame) {
                 print("top goal")
-                pack.center = self.view.center
-                
             }
             
             animator.addBehavior(topSnapBehavior!)
+            
         default: break
         }
     }
