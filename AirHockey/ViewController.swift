@@ -3,6 +3,7 @@ import UIKit
 class ViewController: UIViewController {
     
     var animator: UIDynamicAnimator!
+    var timer = Timer()
     
     @IBOutlet weak var topGoal: UIView!
     @IBOutlet weak var bottomGoal: UIView!
@@ -19,15 +20,20 @@ class ViewController: UIViewController {
     var topSnapBehavior: UISnapBehavior?
     var bottomSnapBehavior: UISnapBehavior?
     
+    var collision = UICollisionBehavior()
+    var collisionCenterLine = UICollisionBehavior()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         animator = UIDynamicAnimator(referenceView: self.view)
         
+        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(statusPack), userInfo: nil, repeats: true)
         
-        let collision = UICollisionBehavior(items: [pack, topPaddle, bottomPaddle])
-        let collisionCenterLine = UICollisionBehavior(items: [topPaddle, bottomPaddle])
+        
+        collision = UICollisionBehavior(items: [pack, topPaddle, bottomPaddle])
+        collisionCenterLine = UICollisionBehavior(items: [topPaddle, bottomPaddle])
         
         collisionCenterLine.addBoundary(withIdentifier: "centerLine" as NSCopying, from: CGPoint(x: 0, y: self.view.center.y), to: CGPoint(x: self.view.frame.width, y: self.view.center.y))
         
@@ -41,6 +47,24 @@ class ViewController: UIViewController {
         self.view.bringSubviewToFront(pack)
     }
     
+    @objc func statusPack() {
+        if pack.frame.intersects(bottomGoal.frame) { //пересечение
+            print("bottom goal")
+            animator.removeBehavior(collision)
+            pack.center = self.view.center
+            animator.addBehavior(self.collision)
+            
+        }
+        
+        if pack.frame.intersects(topGoal.frame) {
+            print("top goal")
+            animator.removeBehavior(collision)
+            pack.center = self.view.center
+            animator.addBehavior(self.collision)
+        }
+        
+    }
+    
     
     @IBAction func topHalfPanGesture(_ sender: UIPanGestureRecognizer) {
         
@@ -51,15 +75,7 @@ class ViewController: UIViewController {
         switch sender.state {
         case .began, .changed:
             topSnapBehavior = UISnapBehavior(item: topPaddle, snapTo: sender.location(in: self.view))
-            
-            if pack.frame.intersects(bottomGoal.frame) { //пересечение
-                print("bottom goal")
-                
-                
-            } else if pack.frame.intersects(topGoal.frame) {
-                print("top goal")
-            }
-            
+    
             animator.addBehavior(topSnapBehavior!)
             
         default: break
@@ -78,14 +94,14 @@ class ViewController: UIViewController {
             bottomSnapBehavior = UISnapBehavior(item: bottomPaddle, snapTo: sender.location(in: self.view))
             animator.addBehavior(bottomSnapBehavior!)
             
-            if pack.frame.intersects(bottomGoal.frame) {
-                print("bottom goal")
-                
-                
-            } else if pack.frame.intersects(topGoal.frame) {
-                print("top goal")
-                
-            }
+//            if pack.frame.intersects(bottomGoal.frame) {
+//                print("bottom goal")
+//
+//
+//            } else if pack.frame.intersects(topGoal.frame) {
+//                print("top goal")
+//
+//            }
             
         default: break
         }
