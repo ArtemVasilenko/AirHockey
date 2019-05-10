@@ -27,6 +27,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         animator = UIDynamicAnimator(referenceView: self.view)
         
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(statusPack), userInfo: nil, repeats: true)
@@ -63,17 +64,17 @@ class ViewController: UIViewController {
             animator.addBehavior(self.collision)
         }
         
-//        let snap = UISnapBehavior(item: topPaddle, snapTo: pack.center)
-        let gravity = UIGravityBehavior(items: [topPaddle])
+        let snap = UISnapBehavior(item: topPaddle, snapTo: pack.center)
+        //        let gravity = UIGravityBehavior(items: [topPaddle])
         
+        if pack.center.y < self.centerLine.center.y {
+            
+            animator.addBehavior(snap)
+            snap.damping = 0.2
+            
         
-        if pack.center.y < self.view.center.y {
-//            animator.addBehavior(snap)
-            gravity.magnitude = 0.1
-            gravity.gravityDirection = CGVector(dx: abs(self.topPaddle.center.x - self.pack.center.x), dy: abs(self.topPaddle.center.y - self.pack.center.y))
-            animator.addBehavior(gravity)
         } else {
-//            animator.removeBehavior(snap)
+            animator.removeBehavior(snap)
         }
         
     }
@@ -88,7 +89,7 @@ class ViewController: UIViewController {
         switch sender.state {
         case .began, .changed:
             topSnapBehavior = UISnapBehavior(item: topPaddle, snapTo: sender.location(in: self.view))
-    
+            
             animator.addBehavior(topSnapBehavior!)
             
         default: break
@@ -107,14 +108,14 @@ class ViewController: UIViewController {
             bottomSnapBehavior = UISnapBehavior(item: bottomPaddle, snapTo: sender.location(in: self.view))
             animator.addBehavior(bottomSnapBehavior!)
             
-//            if pack.frame.intersects(bottomGoal.frame) {
-//                print("bottom goal")
-//
-//
-//            } else if pack.frame.intersects(topGoal.frame) {
-//                print("top goal")
-//
-//            }
+            //            if pack.frame.intersects(bottomGoal.frame) {
+            //                print("bottom goal")
+            //
+            //
+            //            } else if pack.frame.intersects(topGoal.frame) {
+            //                print("top goal")
+            //
+            //            }
             
         default: break
         }
